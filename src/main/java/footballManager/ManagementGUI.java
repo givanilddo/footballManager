@@ -21,16 +21,37 @@ public class ManagementGUI extends JFrame {
         setTitle("FOOTBALL MANAGER");
         setSize(750,500); //tamanho da janela
         setLocation(150, 150);
-        setResizable(false);
+        setResizable(true);
         getContentPane().setBackground(Color.DARK_GRAY);
 
-        line1 = new JLabel("F O O T B A L L   M A N A G E R", JLabel.CENTER);
+        line1 = new JLabel("FOOTBALL MANAGER", JLabel.CENTER);
         line1.setForeground(Color.black);
-        line1.setFont(new Font("Bebas Neue", Font.BOLD, 20));
+        line1.setFont(new Font("Impact", Font.PLAIN, 35));
+
         line2 = new JLabel(logoImg, JLabel.CENTER);
-        getContentPane().setLayout(new GridLayout(3,1));
+
+        line3 = new JLabel("FOOTBALL MANAGER", JLabel.CENTER);
+        line3.setForeground(Color.black);
+        line3.setFont(new Font("Impact", Font.PLAIN, 35));
+
+        line3 = new JLabel(logoImg, JLabel.CENTER);
+
+        addButton = new JButton("Adicionar", add);
+        //addButton.addActionListener(new AgendaAddController(agenda, this));
+        searchButton = new JButton("Pesquisar", search);
+        //searchButton.addActionListener(new AgendaSearchController(agenda, this));
+        removeButton = new JButton("Remover", remove);
+        //removeButton.addActionListener(new AgendaRemoveController(agenda, this));
+
+        getContentPane().setLayout(new GridLayout(4,4));
         getContentPane().add(line1);
+        getContentPane().add(addButton);
+
         getContentPane().add(line2);
+        getContentPane().add(searchButton);
+
+        getContentPane().add(new JLabel());
+        getContentPane().add(removeButton);
     }
 
     public static void main(String[] args) {
