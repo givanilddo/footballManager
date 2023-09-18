@@ -5,14 +5,15 @@ import java.util.Objects;
 
 public class Player implements Serializable {
 
+
     private String name;
     private String club;
-    private int goals;
+    private String cargo;
 
-    public Player(String name, String club, int goals){
+    public Player(String name, String club, String cargo){
         this.name = name;
         this.club = club;
-        this.goals = goals;
+        this.cargo = cargo;
     }
 
     @Override
@@ -22,16 +23,15 @@ public class Player implements Serializable {
 
         Player player = (Player) o;
 
-        if (goals != player.goals) return false;
-        if (!Objects.equals(name, player.name)) return false;
-        return Objects.equals(club, player.club);
+
+        return cargo.equals(player.cargo);
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (club != null ? club.hashCode() : 0);
-        result = 31 * result + goals;
+        int result = cargo != null ? cargo.hashCode() : 0;
+        result = Integer.parseInt(31 * result + name);
+        result = Integer.parseInt(31 * result + club);
         return result;
     }
 
@@ -51,11 +51,12 @@ public class Player implements Serializable {
         this.club = club;
     }
 
-    public int getGoals() {
-        return goals;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setGoals(int goals) {
-        this.goals = goals;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 }
+

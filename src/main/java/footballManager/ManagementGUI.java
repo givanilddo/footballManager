@@ -1,7 +1,6 @@
 package footballManager;
 
 import java.awt.GridLayout;
-
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.JFrame;
@@ -27,19 +26,17 @@ public class ManagementGUI extends JFrame {
         setName("FOOTBALL \n MANAGER");
         setSize(885,600); //tamanho da janela
         setLocation(700, 300);
-        setResizable(false);
-        getContentPane().setBackground(Color.lightGray);
+        setResizable(true);
+        Color color = new Color(115,115,115);
+        getContentPane().setBackground(color);
+
+
 
         line1 = new JLabel(logoImg, JLabel.CENTER);
-
 
         line2 = new JLabel(textImg, JLabel.CENTER);
         line2.setForeground(Color.WHITE);
         line2.setFont(new Font("Arial", Font.PLAIN, 15));
-
-        //line2 = new JLabel("alem de pesquisar e remover de seus respectivos times", JLabel.CENTER);
-        //line2.setForeground(Color.WHITE);
-        //line2.setFont(new Font("Arial", Font.PLAIN, 10));
 
         line3 = new JLabel("GIL", JLabel.CENTER);
         line3.setForeground(Color.yellow);
@@ -71,10 +68,13 @@ public class ManagementGUI extends JFrame {
 
     }
 
-    public static void main(String[] args) {
+
+        public static void main(String[] args) {
+
         JFrame window = new ManagementGUI();
         window.setVisible(true);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
 
+
+    }
 }

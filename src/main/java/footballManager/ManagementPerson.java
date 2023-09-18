@@ -34,9 +34,9 @@ public class ManagementPerson implements PlayerInveterface {
     }
 
     @Override
-    public boolean addPlayer(String name, String club, int goals) {
+    public boolean addPlayer(String name, String club, String cargo) {
         if (!players.containsKey(name)) {
-            this.players.put(name, new Player(name, club, goals));
+            this.players.put(name, new Player(name, club, cargo));
             return true;
         } else {
             return false;
