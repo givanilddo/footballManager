@@ -28,7 +28,7 @@ public class ManagementGUI extends JFrame {
         setSize(885,600); //tamanho da janela
         setLocation(700, 300);
         setResizable(false);
-        getContentPane().setBackground(Color.DARK_GRAY);
+        getContentPane().setBackground(Color.lightGray);
 
         line1 = new JLabel(logoImg, JLabel.CENTER);
 
@@ -42,7 +42,7 @@ public class ManagementGUI extends JFrame {
         //line2.setFont(new Font("Arial", Font.PLAIN, 10));
 
         line3 = new JLabel("GIL", JLabel.CENTER);
-        line3.setForeground(Color.WHITE);
+        line3.setForeground(Color.yellow);
         line3.setFont(new Font("Impact", Font.PLAIN, 25));
 
 
