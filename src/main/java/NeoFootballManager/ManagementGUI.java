@@ -1,25 +1,17 @@
-package footballManager;
+package NeoFootballManager;
 
-import java.awt.GridLayout;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import javax.swing.JFrame;
 
-public class ManagementGUI extends JFrame {
+public class ManagementGUI extends JFrame{
     JLabel line1, line2, line3;
-
-    //Adicionando Imagens
     ImageIcon logoImg = new ImageIcon("./imgs/logo.png"); //C:\Users\Givanildo\Desktop\projeto futebol manager poo\imgs
     ImageIcon addImg = new ImageIcon("./imgs/icons/add.png");
     ImageIcon removeImg = new ImageIcon("./imgs/icons/remove.png");
     ImageIcon searchImg = new ImageIcon("./imgs/icons/search.png");
     ImageIcon textImg = new ImageIcon("./imgs/texto.png");
-
     JButton addButton, removeButton, searchButton;
-
-    Player player = new ManagementPerson();
-
+    Interface anInterface = new ManagementPerson();
 
     public ManagementGUI() {
 
@@ -46,13 +38,13 @@ public class ManagementGUI extends JFrame {
 
 
         addButton = new JButton("Adicionar", addImg);
-        addButton.addActionListener(new PlayerAddController(player, this));
+        addButton.addActionListener(new PlayerAddController(anInterface, this));
 
         searchButton = new JButton("Pesquisar", searchImg);
-        searchButton.addActionListener(new PlayerSearchController(player, this));
+        searchButton.addActionListener(new PlayerSearchController(anInterface, this));
 
         removeButton = new JButton("Remover", removeImg);
-        removeButton.addActionListener(new PlayerRemoveController(player, this));
+        removeButton.addActionListener(new PlayerRemoveController(anInterface, this));
 
 
         getContentPane().setLayout(new GridLayout(3,4, 5, 5));
@@ -69,7 +61,7 @@ public class ManagementGUI extends JFrame {
 
 
     }
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
         JFrame window = new ManagementGUI();
         window.setVisible(true);

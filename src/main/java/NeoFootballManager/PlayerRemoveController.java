@@ -1,4 +1,4 @@
-package footballManager;
+package NeoFootballManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -6,20 +6,19 @@ import java.awt.event.ActionListener;
 
 
 public class PlayerRemoveController implements ActionListener {
-
-    private final Player player;
+    private Interface anInterface;
     private JFrame mainWindow;
-
-    public PlayerRemoveController(Player player, JFrame window) {
-        this.player = player;
+    public PlayerRemoveController(Interface anInterface, JFrame window) {
+        this.anInterface = anInterface;
         this.mainWindow = window;
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         String nome = JOptionPane.showInputDialog(mainWindow,
                 "Qual nome do jogador que quer remover");
-        boolean removeu = player.removePlayer(name);
-        if (removeu) {
+        boolean removed = anInterface.removePlayer(nome);
+        if (removed){
             JOptionPane.showMessageDialog(mainWindow,
                     "jogador removido com sucesso");
         } else {
