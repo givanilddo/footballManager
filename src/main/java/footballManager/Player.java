@@ -59,6 +59,5 @@ public class Player implements Serializable {
         this.cargo = cargo;
     }
 
-
 }
 

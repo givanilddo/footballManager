@@ -3,14 +3,10 @@ package footballManager;
 import java.io.IOException;
 import java.util.*;
 
-public class ManagementPerson implements PlayerInterface {
+public class ManagementPerson implements Interface {
     private static Map<String, Player> players;
     private dataRecorder recorder = new dataRecorder();
 
-    @Override
-    public Collection<Player> searchPlayers(String name, String club) {
-        return null;
-    }
 
     public ManagementPerson() {
         this.players = new HashMap<>();
@@ -41,6 +37,17 @@ public class ManagementPerson implements PlayerInterface {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public Collection<Player> searchPlayers(String name, String club) {
+        Collection<Player> foundPlayers = new ArrayList<>();
+        for (Player c: this.players.values()){
+            if (c.getName()==name && c.getClub()==club){
+                foundPlayers.add(c);
+            }
+        }
+        return foundPlayers;
     }
 
     @Override

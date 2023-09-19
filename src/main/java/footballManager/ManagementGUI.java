@@ -3,6 +3,7 @@ package footballManager;
 import java.awt.GridLayout;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 public class ManagementGUI extends JFrame {
@@ -17,7 +18,7 @@ public class ManagementGUI extends JFrame {
 
     JButton addButton, removeButton, searchButton;
 
-    //Player player = new ManagementPerson();
+    Player player = new ManagementPerson();
 
 
     public ManagementGUI() {
@@ -45,13 +46,13 @@ public class ManagementGUI extends JFrame {
 
 
         addButton = new JButton("Adicionar", addImg);
-        //addButton.addActionListener(new addController(player, this));
+        addButton.addActionListener(new PlayerAddController(player, this));
 
         searchButton = new JButton("Pesquisar", searchImg);
-        //searchButton.addActionListener(new AgendaSearchController(agenda, this));
+        searchButton.addActionListener(new PlayerSearchController(player, this));
 
         removeButton = new JButton("Remover", removeImg);
-        //removeButton.addActionListener(new AgendaRemoveController(agenda, this));
+        removeButton.addActionListener(new PlayerRemoveController(player, this));
 
 
         getContentPane().setLayout(new GridLayout(3,4, 5, 5));

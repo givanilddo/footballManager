@@ -5,12 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class addController implements ActionListener
-/*
+
+public class PlayerAddController implements ActionListener{
+
     private Player player;
     private JFrame mainWindow;
 
-    public addController(Player player, JFrame window){
+    public PlayerAddController(Player player, JFrame window){
         this.player = player;
         this.mainWindow = window;
     }
@@ -24,7 +25,7 @@ public class addController implements ActionListener
         String cargo = JOptionPane.showInputDialog(mainWindow,
                 "Qual seu cargo no clube ? ");
 
-        boolean registered = ????.addPlayer(name, club, cargo);
+        boolean registered = Player.addPlayer(String);
 
         if(registered){
             JOptionPane.showMessageDialog(mainWindow,
@@ -39,4 +40,3 @@ public class addController implements ActionListener
 
 
 }
-*/
