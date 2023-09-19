@@ -17,7 +17,7 @@ public class ManagementGUI extends JFrame {
 
     JButton addButton, removeButton, searchButton;
 
-    Player player = new ManagementPerson();
+    //Player player = new ManagementPerson();
 
 
     public ManagementGUI() {
@@ -25,7 +25,7 @@ public class ManagementGUI extends JFrame {
 
 
         setName("FOOTBALL \n MANAGER");
-        setSize(885,600); //tamanho da janela
+        setSize(885,600);
         setLocation(700, 300);
         setResizable(true);
         Color color = new Color(115,115,115);
@@ -45,7 +45,7 @@ public class ManagementGUI extends JFrame {
 
 
         addButton = new JButton("Adicionar", addImg);
-        addButton.addActionListener(new addController(player, this));
+        //addButton.addActionListener(new addController(player, this));
 
         searchButton = new JButton("Pesquisar", searchImg);
         //searchButton.addActionListener(new AgendaSearchController(agenda, this));

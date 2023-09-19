@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class ManagementPerson implements PlayerInterface {
-    private Map<String, Player> players;
+    private static Map<String, Player> players;
     private dataRecorder recorder = new dataRecorder();
 
     @Override

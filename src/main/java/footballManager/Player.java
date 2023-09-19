@@ -1,7 +1,6 @@
 package footballManager;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Player implements Serializable {
 
@@ -10,10 +9,11 @@ public class Player implements Serializable {
     private String club;
     private String cargo;
 
-    public Player(String name, String club, String cargo){
+    public Player(String name, String club, String cargo) {
         this.name = name;
         this.club = club;
         this.cargo = cargo;
+
     }
 
     @Override
