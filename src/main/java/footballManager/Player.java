@@ -58,5 +58,7 @@ public class Player implements Serializable {
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
+
+
 }
 

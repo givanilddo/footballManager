@@ -2,7 +2,7 @@ package footballManager;
 
 import java.util.Collection;
 
-public interface PlayerInveterface {
+public interface PlayerInterface {
 
     public boolean addPlayer(String name, String club, String cargo);
 

@@ -3,7 +3,7 @@ package footballManager;
 import java.io.IOException;
 import java.util.*;
 
-public class ManagementPerson implements PlayerInveterface {
+public class ManagementPerson implements PlayerInterface {
     private Map<String, Player> players;
     private dataRecorder recorder = new dataRecorder();
 

@@ -17,6 +17,7 @@ public class ManagementGUI extends JFrame {
 
     JButton addButton, removeButton, searchButton;
 
+    Player player = new ManagementPerson();
 
 
     public ManagementGUI() {
@@ -44,7 +45,7 @@ public class ManagementGUI extends JFrame {
 
 
         addButton = new JButton("Adicionar", addImg);
-        //addButton.addActionListener(new AgendaAddController(agenda, this));
+        addButton.addActionListener(new addController(player, this));
 
         searchButton = new JButton("Pesquisar", searchImg);
         //searchButton.addActionListener(new AgendaSearchController(agenda, this));
@@ -67,8 +68,6 @@ public class ManagementGUI extends JFrame {
 
 
     }
-
-
         public static void main(String[] args) {
 
         JFrame window = new ManagementGUI();
