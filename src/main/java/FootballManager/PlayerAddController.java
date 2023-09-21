@@ -30,7 +30,7 @@ public class PlayerAddController implements ActionListener {
         } else {
             JOptionPane.showMessageDialog(mainWindow,
                     "Jogador não foi cadastrado. " +
-                            "Verifique se já não existia");
+                            "Verifique se já não já havia sido cadastrado");
         }
     }
 

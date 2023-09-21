@@ -42,7 +42,7 @@ public class ManagementPerson implements Interface {
     public Collection<Player> searchPlayers(String clube, String cargo) {
         Collection<Player> foundPlayers = new ArrayList<>();
         for (Player c: this.players.values()){
-            if (c.getClube()==clube && c.getCargo()==cargo){
+            if (c.getClube() == clube && c.getCargo() == cargo){
                 foundPlayers.add(c);
             }
         }

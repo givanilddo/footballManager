@@ -15,13 +15,15 @@ public class ManagementGUI extends JFrame{
 
     public ManagementGUI() {
 
-
-
+        setTitle("Football Manager");
         setName("FOOTBALL \n MANAGER");
         setSize(885,600);
         setLocation(700, 300);
-        setResizable(true);
+        setResizable(false);
+
+        //background color
         Color color = new Color(115,115,115);
+        Color color2 = new Color(244,232,60);
         getContentPane().setBackground(color);
 
 
@@ -29,11 +31,9 @@ public class ManagementGUI extends JFrame{
         line1 = new JLabel(logoImg, JLabel.CENTER);
 
         line2 = new JLabel(textImg, JLabel.CENTER);
-        line2.setForeground(Color.WHITE);
-        line2.setFont(new Font("Arial", Font.PLAIN, 15));
 
-        line3 = new JLabel("GIL", JLabel.CENTER);
-        line3.setForeground(Color.yellow);
+        line3 = new JLabel("POO - 2023", JLabel.CENTER);
+        line3.setForeground(color2);
         line3.setFont(new Font("Impact", Font.PLAIN, 25));
 
 
@@ -47,20 +47,20 @@ public class ManagementGUI extends JFrame{
         removeButton.addActionListener(new PlayerRemoveController(anInterface, this));
 
 
-        getContentPane().setLayout(new GridLayout(3,4, 5, 5));
+        getContentPane().setLayout(new GridLayout(3,3, 5, 5));
 
+        //line1
         getContentPane().add(line1);
         getContentPane().add(addButton);
-
+        //line2
         getContentPane().add(line2);
         getContentPane().add(searchButton);
-
+        //line3
         getContentPane().add(line3);
         getContentPane().add(removeButton);
 
-
-
     }
+    //Main
     public static void main(String[] args) {
 
         JFrame window = new ManagementGUI();

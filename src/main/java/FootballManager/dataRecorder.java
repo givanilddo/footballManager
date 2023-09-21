@@ -31,7 +31,7 @@ public class dataRecorder {
             out.writeObject(players);
         } catch (Exception e){
             e.printStackTrace();
-            throw new IOException("Erro ao salvar os players no arquivo "+ ARQUIVOS_DATA);
+            throw new IOException("Erro ao salvar os jogadores no arquivo "+ ARQUIVOS_DATA);
         }
     }
 }
