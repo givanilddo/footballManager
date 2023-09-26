@@ -7,30 +7,30 @@ import java.util.Collection;
 
 public class PlayerSearchController implements ActionListener {
     private Interface anInterface;
-    private JFrame janelaPrincipal;
+    private JFrame mainWindow;
 
-    public PlayerSearchController(Interface anInterface, JFrame janela) {
+    public PlayerSearchController(Interface anInterface, JFrame window) {
         this.anInterface = anInterface;
-        this.janelaPrincipal = janela;
+        this.mainWindow = window;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String clube = JOptionPane.showInputDialog(janelaPrincipal,
+        String clube = JOptionPane.showInputDialog(mainWindow,
                 "Qual nome do jogador que quer pesquisar ?");
-        String cargo = JOptionPane.showInputDialog(janelaPrincipal,
+        String cargo = JOptionPane.showInputDialog(mainWindow,
                 "Qual o nome do seu clube ?");
 
-        Collection<Player> jogadores = anInterface.searchPlayers(clube, cargo);
+        Collection<Player> players = anInterface.searchPlayers(clube, cargo);
 
-        if (jogadores.size()>0){
-            JOptionPane.showMessageDialog(janelaPrincipal,
+        if (players.equals(players)){
+            JOptionPane.showMessageDialog(mainWindow,
                     "Jogadores encontrados:");
-            for (Player c: jogadores){
-                JOptionPane.showMessageDialog(janelaPrincipal, c.toString());
+            for (Player c: players){
+                JOptionPane.showMessageDialog(mainWindow, c.toString());
             }
         } else {
-            JOptionPane.showMessageDialog(janelaPrincipal,
+            JOptionPane.showMessageDialog(mainWindow,
                     "Não foi encontrado nenhum jogador");
         }
     }

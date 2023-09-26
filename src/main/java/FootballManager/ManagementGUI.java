@@ -9,8 +9,9 @@ public class ManagementGUI extends JFrame{
     ImageIcon addImg = new ImageIcon("./imgs/icons/add.png");
     ImageIcon removeImg = new ImageIcon("./imgs/icons/remove.png");
     ImageIcon searchImg = new ImageIcon("./imgs/icons/search.png");
+    //ImageIcon saveImg = new ImageIcon("./imgs/icons/save.png");
     ImageIcon textImg = new ImageIcon("./imgs/texto.png");
-    JButton addButton, removeButton, searchButton;
+    JButton addButton, removeButton, searchButton; //saveButton;
     Interface anInterface = new ManagementPerson();
 
     public ManagementGUI() {
@@ -46,6 +47,8 @@ public class ManagementGUI extends JFrame{
         removeButton = new JButton("Remover", removeImg);
         removeButton.addActionListener(new PlayerRemoveController(anInterface, this));
 
+        //saveButton = new JButton("Salvar", saveImg);
+        //saveButton.addActionListener((new PlayerSaveController(anInterface, this)));
 
         getContentPane().setLayout(new GridLayout(3,3, 5, 5));
 
@@ -60,6 +63,7 @@ public class ManagementGUI extends JFrame{
         getContentPane().add(removeButton);
 
     }
+    
     //Main
     public static void main(String[] args) {
 

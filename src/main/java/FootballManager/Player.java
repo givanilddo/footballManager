@@ -8,7 +8,7 @@ public class Player implements Serializable {
     private String nome;
     private String clube;
     private String cargo;
-    public Player(String nome, String dia, String mes){
+    public Player(String nome, String clube, String cargo){
         this.nome = nome;
         this.clube = clube;
         this.cargo = cargo;
