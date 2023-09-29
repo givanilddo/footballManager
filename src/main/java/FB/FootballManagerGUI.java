@@ -41,13 +41,14 @@ public class FootballManagerGUI {
 
         JPanel panel = new JPanel();
 
-        panel.setLayout(new GridLayout(3, 10, 7, 7));
+        panel.setLayout(new GridLayout(3, 7, 7, 7));
         panel.setBackground(color);
 
         JLabel nomeLabel = new JLabel("     Nome:");
         nomeLabel.setBackground(color);
         nomeLabel.setOpaque(true);
         nomeField = new JTextField();
+
 
         JLabel clubeLabel = new JLabel("     Clube:");
         clubeLabel.setBackground(color);
@@ -63,7 +64,7 @@ public class FootballManagerGUI {
 
         //Botões
         JButton adicionarButton = new JButton("Adicionar", addImg);
-        adicionarButton.setBackground(Color.white); //altera cor de fundo do botão
+        adicionarButton.setBackground(Color.white);
         adicionarButton.setOpaque(true);
         adicionarButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +77,7 @@ public class FootballManagerGUI {
             }
         });
         JButton buscarButton = new JButton("Buscar", searchImg);
-        buscarButton.setBackground(Color.white); //altera cor de fundo do botão
+        buscarButton.setBackground(Color.white);
         buscarButton.setOpaque(true);
         buscarButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -87,7 +88,7 @@ public class FootballManagerGUI {
             }
         });
         JButton excluirButton = new JButton("Excluir",removeImg);
-        excluirButton.setBackground(Color.white); //altera cor de fundo do botão
+        excluirButton.setBackground(Color.white);
         excluirButton.setOpaque(true);
         excluirButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
