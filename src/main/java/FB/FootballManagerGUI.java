@@ -30,9 +30,10 @@ public class FootballManagerGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 800);
         frame.setLocation(700, 300);
-        frame.setResizable(true);
+        frame.setResizable(false);
 
         Color color = new Color(177,177,177);
+        Color color2 = new Color(115,115,115);
 
         JPanel mainPanel = new JPanel(new BorderLayout());
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -42,25 +43,22 @@ public class FootballManagerGUI {
         JPanel panel = new JPanel();
 
         panel.setLayout(new GridLayout(3, 7, 7, 7));
-        panel.setBackground(color);
+        panel.setBackground(color2);
 
         JLabel nomeLabel = new JLabel("     Nome:");
-        nomeLabel.setBackground(color);
+        nomeLabel.setBackground(color2);
         nomeLabel.setOpaque(true);
         nomeField = new JTextField();
 
-
         JLabel clubeLabel = new JLabel("     Clube:");
-        clubeLabel.setBackground(color);
+        clubeLabel.setBackground(color2);
         clubeLabel.setOpaque(true);
         clubeField = new JTextField();
 
         JLabel cargoLabel = new JLabel("     Cargo:");
-        cargoLabel.setBackground(color);
+        cargoLabel.setBackground(color2);
         cargoLabel.setOpaque(true);
         cargoField = new JTextField();
-
-
 
         //Botões
         JButton adicionarButton = new JButton("Adicionar", addImg);
@@ -115,6 +113,7 @@ public class FootballManagerGUI {
         panel.add(cargoField);
         panel.add(excluirButton);
 
+        //Resultado Area
         mainPanel.add(panel, BorderLayout.CENTER);
         resultadoArea = new JTextArea();
         resultadoArea.setEditable(false);
@@ -122,6 +121,7 @@ public class FootballManagerGUI {
         resultadoArea.setColumns(40);
         resultadoArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(resultadoArea);
+        resultadoArea.setBackground(color);
 
         mainPanel.add(new JScrollPane(resultadoArea), BorderLayout.SOUTH);
 
