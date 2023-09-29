@@ -30,7 +30,7 @@ public class FootballManagerGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 800);
         frame.setLocation(700, 300);
-        frame.setResizable(false);
+        frame.setResizable(true);
 
         Color color = new Color(177,177,177);
 
@@ -118,6 +118,11 @@ public class FootballManagerGUI {
         mainPanel.add(panel, BorderLayout.CENTER);
         resultadoArea = new JTextArea();
         resultadoArea.setEditable(false);
+        resultadoArea.setRows(20);
+        resultadoArea.setColumns(40);
+        resultadoArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(resultadoArea);
+
         mainPanel.add(new JScrollPane(resultadoArea), BorderLayout.SOUTH);
 
         frame.add(mainPanel);
