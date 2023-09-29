@@ -14,46 +14,34 @@ public class FootballManagerGUI {
     private JTextArea resultadoArea;
     private GerenciadorJogadores gerenciador;
 
-    JLabel line1, line2, line3;
+    //imagens
     ImageIcon logoImg = new ImageIcon("./imgs/logo.png");
     ImageIcon addImg = new ImageIcon("./imgs/icons/add.png");
     ImageIcon removeImg = new ImageIcon("./imgs/icons/remove.png");
     ImageIcon searchImg = new ImageIcon("./imgs/icons/search.png");
     ImageIcon textImg = new ImageIcon("./imgs/texto.png");
-    JButton  addButton, removeButton, searchButton;
-
 
 
     public FootballManagerGUI() {
+
         gerenciador = new GerenciadorJogadores();
-
-
 
         frame = new JFrame("FOOTBALL MANAGER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 600);
+        frame.setSize(500, 800);
         frame.setLocation(700, 300);
-        frame.setResizable(true);
-
+        frame.setResizable(false);
 
         Color color = new Color(177,177,177);
 
-
-
-
-        JLabel logoLabel = new JLabel(logoImg);
-        logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        frame.add(new JLabel());
-        frame.add(logoLabel);
-        frame.add(new JLabel());
-        frame.add(new JLabel());
-        frame.add(new JLabel());
-        frame.add(new JLabel());
-
+        JPanel mainPanel = new JPanel(new BorderLayout());
+        JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        topPanel.add(new JLabel(new ImageIcon("./imgs/logo.png")));
+        mainPanel.add(topPanel, BorderLayout.NORTH);
 
         JPanel panel = new JPanel();
 
-        panel.setLayout(new GridLayout(4, 7, 7, 7));
+        panel.setLayout(new GridLayout(3, 10, 7, 7));
         panel.setBackground(color);
 
         JLabel nomeLabel = new JLabel("     Nome:");
@@ -126,8 +114,12 @@ public class FootballManagerGUI {
         panel.add(cargoField);
         panel.add(excluirButton);
 
-        frame.add(panel, BorderLayout.NORTH);
-        frame.add(new JScrollPane(resultadoArea), BorderLayout.CENTER);
+        mainPanel.add(panel, BorderLayout.CENTER);
+        resultadoArea = new JTextArea();
+        resultadoArea.setEditable(false);
+        mainPanel.add(new JScrollPane(resultadoArea), BorderLayout.SOUTH);
+
+        frame.add(mainPanel);
         frame.setVisible(true);
     }
 
