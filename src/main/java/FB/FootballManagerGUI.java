@@ -45,6 +45,7 @@ public class FootballManagerGUI {
         panel.setLayout(new GridLayout(3, 7, 7, 7));
         panel.setBackground(color2);
 
+        //texto area
         JLabel nomeLabel = new JLabel("     Nome:");
         nomeLabel.setBackground(color2);
         nomeLabel.setOpaque(true);
@@ -98,6 +99,7 @@ public class FootballManagerGUI {
             }
         });
 
+        //Resultado Area
         resultadoArea = new JTextArea();
         resultadoArea.setEditable(false);
 
@@ -113,7 +115,6 @@ public class FootballManagerGUI {
         panel.add(cargoField);
         panel.add(excluirButton);
 
-        //Resultado Area
         mainPanel.add(panel, BorderLayout.CENTER);
         resultadoArea = new JTextArea();
         resultadoArea.setEditable(false);
